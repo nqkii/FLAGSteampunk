@@ -1,10 +1,9 @@
-using System.ComponentModel;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     public float speed;
     public Transform player;
 
@@ -12,8 +11,16 @@ public class PlayerMovement : MonoBehaviour
 
     bool facingRight;
 
+    [Header("Jumping")]
     public float jumpForce = 10;
-    bool onGround;
+    public bool onGround;
+
+    [Header("Dashing")]
+    public bool canDash = true;
+    public float dashingTime;
+    public float dashSpeed;
+    public float dashJumpIncrease;
+    public float timeBetweenDashes;
 
     void Start()
     {
@@ -23,7 +30,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //jump when on ground and pressing space
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            onGround = false;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
 
+        // dash when off ground and pressing left shift
+        if (!onGround && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            DashAbility();
+        }
     }
 
     private void FixedUpdate()
@@ -43,15 +61,9 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        //jump when on ground and pressing space
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            onGround = false;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
-        }
-
     }
 
+    //flip player
     void Flip()
     {
         facingRight = !facingRight;
@@ -69,4 +81,24 @@ public class PlayerMovement : MonoBehaviour
         onGround = false;
     }
 
+    void DashAbility()
+    {
+        if(canDash)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    //dash player
+    IEnumerator Dash()
+    {
+        canDash = false;
+        speed = dashSpeed;
+        jumpForce = dashJumpIncrease;
+        yield return new WaitForSeconds(dashingTime);
+        speed = 9;
+        jumpForce = 5;
+        yield return new WaitForSeconds(timeBetweenDashes);
+        canDash = true;
+    }
 }
