@@ -8,32 +8,35 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] private GameObject room4object;
 
     private roomType nextRoom;
-    private Vector3 nextRoomPosition;
+    [SerializeField] private Vector3 nextRoomPosition;
+    [SerializeField] private float scale;
     private roomType[] rooms;
 
     private void Start()
     {
         roomType room1 = new roomType(room1object, 4, 0);
-        roomType room2 = new roomType(room2object, 8, 0);
-        roomType room3 = new roomType(room3object, 8, -1.94f);
+        //roomType room2 = new roomType(room2object, 8, 0);
+        //roomType room3 = new roomType(room3object, 8, -1.94f);
         //roomType room4 = new roomType(room4object, 8, 1.94f);
-        nextRoom = room2;
-        rooms = new roomType[] { room1, room2, room3 };//, room4 };
-        Debug.Log(rooms);
+        nextRoom = room1;
+        //rooms = new roomType[] { room1, room2, room3 };//, room4 };
+        //Debug.Log(rooms);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("NewRoom"))
         {
-            Instantiate(nextRoom.roomObject, nextRoomPosition, Quaternion.identity);
-            nextRoomPosition.z += nextRoom.roomLength;
-            nextRoomPosition.y += nextRoom.verticalChange;
+            GameObject newRoom = Instantiate(nextRoom.roomObject, nextRoomPosition, Quaternion.identity);
+            newRoom.transform.localScale = new Vector3(scale, scale, scale);
+            newRoom.transform.Rotate(0, -90, 0);
+            nextRoomPosition.x += nextRoom.roomLength * scale;
+            nextRoomPosition.y += nextRoom.verticalChange * scale;
         }
-        int randomRoom = Random.Range(0, 3);
-        Debug.Log(randomRoom);
-        Debug.Log(rooms);
-        nextRoom = rooms[randomRoom];
+        //int randomRoom = Random.Range(0, 3);
+        //Debug.Log(randomRoom);
+        //Debug.Log(rooms);
+        //nextRoom = rooms[randomRoom];
     }
 
     private class roomType

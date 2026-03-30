@@ -1189,6 +1189,29 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 722933499}
   m_SourcePrefab: {fileID: 100100000, guid: ccd718c88a49a83418a3d88d1a3a43e2, type: 3}
+--- !u!1 &1406203497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2060002192423848316, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+  m_PrefabInstance: {fileID: 2710177727206066894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1406203501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406203497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3432f0439afe934aa98834947246124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProceduralGeneration
+  room1object: {fileID: 1676923041361213007, guid: 0aac354e1083eb847aac31120e4181fe, type: 3}
+  room2object: {fileID: 0}
+  room3object: {fileID: 0}
+  room4object: {fileID: 0}
+  nextRoomPosition: {x: 69.04, y: 3.65874, z: -1.28}
+  scale: 1.532052
 --- !u!1001 &1410081666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2217,7 +2240,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2687320176292672619, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 722933498}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2060002192423848316, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1406203501}
   m_SourcePrefab: {fileID: 100100000, guid: 3309279d784685b43aa1be345206a89a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
