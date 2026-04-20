@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform player;
 
     Rigidbody rb;
+    Animator animator;
 
     bool facingRight;
 
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        animator = gameObject.GetComponent<Animator>();
         facingRight = true;
     }
 
@@ -42,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
         {
             DashAbility();
         }
+
+        //animate jump , needs adjusting, working on it!
+        //animator.SetFloat("Jump", rb.linearVelocity.y);
+
     }
 
     private void FixedUpdate()
@@ -49,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
 
         //character moves horizontally
-        rb.linearVelocity = new Vector3(move * speed, rb.linearVelocity.y, 0);
+        rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, move * speed);
         
         //player flips towards the moving direction
         if(move>0 && !facingRight)
@@ -60,6 +67,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        //idle and running animation
+        if(rb.linearVelocity == Vector3.zero)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0.2f);
+        }
+        
 
     }
 
