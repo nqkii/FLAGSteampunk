@@ -691,6 +691,7 @@ MonoBehaviour:
   player: {fileID: 997043327}
   jumpForce: 5
   onGround: 0
+  fallMultiplier: 2.5
   canDash: 1
   dashingTime: 0.2
   dashSpeed: 20
@@ -716,9 +717,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2.388874
+  m_Height: 2.4923291
   m_Direction: 1
-  m_Center: {x: 0, y: 1.1750894, z: 0}
+  m_Center: {x: -0, y: 1.1233618, z: 0}
 --- !u!54 &1013089880
 Rigidbody:
   m_ObjectHideFlags: 0

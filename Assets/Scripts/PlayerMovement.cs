@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 10;
     public bool onGround;
 
+    public float fallMultiplier = 2.5f;
+
     [Header("Dashing")]
     public bool canDash = true;
     public float dashingTime;
@@ -37,9 +39,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            //rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            rb.linearVelocity = Vector3.up * jumpForce;
+            
+            
         }
-
+        if(rb.linearVelocity.y < 0)
+        {
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
         // dash when off ground and pressing left shift
         if (!onGround && Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -47,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //animate jump , needs adjusting, working on it!
-        //animator.SetFloat("Jump", rb.linearVelocity.y);
+        animator.SetFloat("Jump", rb.linearVelocity.y);
 
     }
 
@@ -73,9 +81,9 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", 0);
         }
-        else
+        else if(rb.linearVelocity.z > 0)
         {
-            animator.SetFloat("Speed", 0.2f);
+            animator.SetFloat("Speed", 5);
         }
         
 
