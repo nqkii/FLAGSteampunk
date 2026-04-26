@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_pl
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: 748f212a5476d3b4ab6e2bb2045689f1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 25581264896
+    m_Localized: opcje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14240111075328
+    m_Localized: "j\u0119zyk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14293701697536
+    m_Localized: angielski
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30735138496512
+    m_Localized: polski
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30767484968960
+    m_Localized: "rozdzielczo\u015B\u0107 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30789056274432
+    m_Localized: sterowanie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31050428522496
+    m_Localized: autorzy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31070515044352
+    m_Localized: "wr\xF3\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35954538782720
+    m_Localized: graj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36036076052480
+    m_Localized: "wyjd\u017A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37136099385344
+    m_Localized: gra zapauzowana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37157012185088
+    m_Localized: "wzn\xF3w gr\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37178549936128
+    m_Localized: "menu g\u0142\xF3wne "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37206270091264
+    m_Localized: "wyjd\u017A na pulpit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42900801134592
+    m_Localized: "Para Ci\u0119 Dopad\u0142a... "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42962428043264
+    m_Localized: 'Przebyty Dystans:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43011409125376
+    m_Localized: Nowy Rekord!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43030765838336
+    m_Localized: 'zagraj ponownie '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44954420453376
+    m_Localized: "Jak Gra\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45033340477440
+    m_Localized: "Biegnij, Skacz, I \u015Blizgaj si\u0119 po fabryce aby uciec przed
+      niebezpieczn\u0105 chmur\u0105 pary za tob\u0105 \r\nPo drodze zbieraj Z\u0119batki
+      kt\xF3re zwi\u0119kszajom twoje umiej\u0119tno\u015Bci. Jak Uzbierasz wszystkie
+      trzy rodzaje Z\u0119batek dostaniesz tymczasowe zwi\u0119kszenie pr\u0119dko\u015Bci!
+      \r\nSprawd\u017A jak daleko uda ci si\u0119 uciec zanim para ci\u0119 dopadnie!
+      \r\n\r\nA \u2013 Biegnij Do Ty\u0142u                 D \u2013 Biegnij Do Przodu
+      \r\nSpace - Skok                          Esc - Pauza\r\n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

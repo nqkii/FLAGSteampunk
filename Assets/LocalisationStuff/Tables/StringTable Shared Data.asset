@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: 748f212a5476d3b4ab6e2bb2045689f1
+  m_Entries:
+  - m_Id: 25581264896
+    m_Key: OptionsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14240111075328
+    m_Key: LanguageText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14293701697536
+    m_Key: EnglishText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30735138496512
+    m_Key: PolishText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30767484968960
+    m_Key: ResolutionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30789056274432
+    m_Key: ControlsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31050428522496
+    m_Key: CreditsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31070515044352
+    m_Key: BackText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35954538782720
+    m_Key: PlayText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36036076052480
+    m_Key: QuitText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37136099385344
+    m_Key: PausedText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37157012185088
+    m_Key: ResumeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37178549936128
+    m_Key: MainMenuText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37206270091264
+    m_Key: ExitToDesktopText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42900801134592
+    m_Key: CaughtText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42962428043264
+    m_Key: DistanceTravelledText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43011409125376
+    m_Key: HighScoreText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43030765838336
+    m_Key: PlayAgainText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44954420453376
+    m_Key: HowToPlayText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45033340477440
+    m_Key: TutorialLongText
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4195272983455727823
+  references:
+    version: 2
+    RefIds:
+    - rid: 4195272983455727823
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1777226259442
