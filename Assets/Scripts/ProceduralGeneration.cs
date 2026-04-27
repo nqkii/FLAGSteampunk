@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ProceduralGeneration : MonoBehaviour
@@ -8,9 +9,11 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] private GameObject room4object;
 
     private roomType nextRoom;
+    private GameObject deleteRoom;
     [SerializeField] private Vector3 nextRoomPosition;
     [SerializeField] private float scale;
     private roomType[] rooms;
+    private Queue<GameObject> instantiatedRooms = new Queue<GameObject>();
 
     private void Start()
     {
@@ -30,8 +33,14 @@ public class ProceduralGeneration : MonoBehaviour
             GameObject newRoom = Instantiate(nextRoom.roomObject, nextRoomPosition, Quaternion.identity);
             newRoom.transform.localScale = new Vector3(scale, scale, scale);
             newRoom.transform.Rotate(0, -90, 0);
+            instantiatedRooms.Enqueue(newRoom);
             nextRoomPosition.x += nextRoom.roomLength * scale;
             nextRoomPosition.y += nextRoom.verticalChange * scale;
+            if (instantiatedRooms.Count > 8)
+            {
+                deleteRoom = instantiatedRooms.Dequeue();
+                Destroy(deleteRoom);
+            }
         }
         //int randomRoom = Random.Range(0, 3);
         //Debug.Log(randomRoom);
