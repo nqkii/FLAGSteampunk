@@ -112,6 +112,24 @@ MonoBehaviour:
       - Jump                          Esc - Pause'
     m_Metadata:
       m_Items: []
+  - m_Id: 2476493263544320
+    m_Localized: "Idea: \r\nJoshua Cajudo \r\n\r\nGameplay Design: \r\nRebecca Cresswell
+      \r\n\r\nCode: \r\nNikki Van Der Kleij \r\nJay Meeks \r\n\r\n3D Art: \r\nJoshua
+      Cajudo \r\nWiktoria Wisniewska"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476547198099456
+    m_Localized: "3D Animation: \r\nWiktoria Wisniewska \r\n\r\n2D & UI Art: \r\nRebecca
+      Cresswell \r\n\r\nSound implementation: \r\nElroy De Souza \r\n\r\nMarket &
+      Media Assets: \r\nRebecca Cresswell"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476575912304640
+    m_Localized: "Font: \r\nMochesa \u2013 Aqeela Studio  \n\r\nMusic: \r\nPixabay
+      - freesound_community \r\n\r\nSound Effects: \r\nPixabay \u2013 DavidDumaisAudio
+      \r\nPixabay - Dragon-Studio \r\nPixabay - Thomas_Herudek "
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

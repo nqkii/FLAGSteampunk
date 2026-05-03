@@ -104,6 +104,24 @@ MonoBehaviour:
       \r\nSpace - Skok                          Esc - Pauza\r\n"
     m_Metadata:
       m_Items: []
+  - m_Id: 2476493263544320
+    m_Localized: "Pomys\u0142: \r\nJoshua Cajudo \r\n\r\nProjektant rozgrywki: \r\nRebecca
+      Cresswell \r\n\r\nKod: \r\nNikki Van Der Kleij \r\nJay Meeks \r\n\r\n3D Modele:
+      \r\nJoshua Cajudo \r\nWiktoria Wisniewska"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476547198099456
+    m_Localized: "3D Animacja: \r\nWiktoria Wisniewska \r\n\r\n2D Grafiki i UI: \r\nRebecca
+      Cresswell \r\n\r\nImplementacja D\u017Awi\u0119ku: \r\nElroy De Souza \r\n\r\nMateria\u0142y
+      marketingowe: \r\nRebecca Cresswell"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476575912304640
+    m_Localized: "Tw\xF3rca font\xF3w: \r\nMochesa \u2013 Aqeela Studio  \r\n\r\nMuzyka:
+      \r\nPixabay - freesound_community \r\n\r\nEfekty d\u017Awi\u0119kowe: \r\nPixabay
+      \u2013 DavidDumaisAudio\r\nPixabay - Dragon-Studio \r\nPixabay - Thomas_Herudek"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

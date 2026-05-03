@@ -95,6 +95,18 @@ MonoBehaviour:
     m_Key: TutorialLongText
     m_Metadata:
       m_Items: []
+  - m_Id: 2476493263544320
+    m_Key: CreditsLongText_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476547198099456
+    m_Key: CreditsLongText_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2476575912304640
+    m_Key: CreditsLongText_C
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
