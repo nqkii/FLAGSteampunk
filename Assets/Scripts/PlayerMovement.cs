@@ -39,14 +39,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
-            rb.linearVelocity = Vector3.up * jumpForce;
-            
-            
+            rb.linearVelocity = Vector3.up * jumpForce; 
         }
         if(rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
+
         // dash when off ground and pressing left shift
         if (!onGround && Input.GetKeyDown(KeyCode.LeftShift))
         {
