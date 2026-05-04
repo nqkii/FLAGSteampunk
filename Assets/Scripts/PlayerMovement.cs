@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
-            //rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
             rb.linearVelocity = Vector3.up * jumpForce;
             
             
@@ -64,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
 
         //character moves horizontally
-        rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, move * speed);
+        rb.linearVelocity = new Vector3(move * speed, rb.linearVelocity.y, 0);
         
         //player flips towards the moving direction
         if(move>0 && !facingRight)
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", 0);
         }
-        else if(rb.linearVelocity.z > 0)
+        else if(rb.linearVelocity.x > 0)
         {
             animator.SetFloat("Speed", 5);
         }
