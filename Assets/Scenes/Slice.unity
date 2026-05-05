@@ -1118,8 +1118,8 @@ MonoBehaviour:
   room2object: {fileID: 0}
   room3object: {fileID: 0}
   room4object: {fileID: 0}
-  nextRoomPosition: {x: 69.04, y: 3.65874, z: -1.28}
-  scale: 1.532052
+  nextRoomPosition: {x: 35.95, y: 0, z: -1}
+  scale: 1
 --- !u!95 &1406203504
 Animator:
   serializedVersion: 7
@@ -1342,7 +1342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Score
   player: {fileID: 406944063}
   scoreText: {fileID: 1220282885}
-  highScoreText: {fileID: 0}
 --- !u!4 &1660572418
 Transform:
   m_ObjectHideFlags: 0

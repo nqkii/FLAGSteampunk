@@ -14,6 +14,7 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] private float scale;
     private roomType[] rooms;
     private Queue<GameObject> instantiatedRooms = new Queue<GameObject>();
+    private bool isColliding = false;
 
     private void Start()
     {
@@ -30,16 +31,22 @@ public class ProceduralGeneration : MonoBehaviour
     {
         if (other.gameObject.CompareTag("NewRoom"))
         {
-            GameObject newRoom = Instantiate(nextRoom.roomObject, nextRoomPosition, Quaternion.identity);
-            newRoom.transform.localScale = new Vector3(scale, scale, scale);
-            newRoom.transform.Rotate(0, -90, 0);
-            instantiatedRooms.Enqueue(newRoom);
-            nextRoomPosition.x += nextRoom.roomLength * scale;
-            nextRoomPosition.y += nextRoom.verticalChange * scale;
-            if (instantiatedRooms.Count > 8)
+            if (isColliding) return;
+            isColliding = true;
+            Vector3 dir = other.transform.position - transform.position;
+            if (dir.x > 0)
             {
-                deleteRoom = instantiatedRooms.Dequeue();
-                Destroy(deleteRoom);
+                GameObject newRoom = Instantiate(nextRoom.roomObject, nextRoomPosition, Quaternion.identity);
+                newRoom.transform.localScale = new Vector3(scale, scale, scale);
+                newRoom.transform.Rotate(0, -90, 0);
+                instantiatedRooms.Enqueue(newRoom);
+                nextRoomPosition.x += nextRoom.roomLength * scale;
+                nextRoomPosition.y += nextRoom.verticalChange * scale;
+                if (instantiatedRooms.Count > 8)
+                {
+                    deleteRoom = instantiatedRooms.Dequeue();
+                    Destroy(deleteRoom);
+                }
             }
         }
         //int randomRoom = Random.Range(0, 3);
@@ -60,5 +67,10 @@ public class ProceduralGeneration : MonoBehaviour
             this.roomLength = roomLength;
             this.verticalChange = verticalChange;
         }
+    }
+
+    private void Update()
+    {
+        isColliding = false;
     }
 }
