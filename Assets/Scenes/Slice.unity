@@ -1114,10 +1114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3432f0439afe934aa98834947246124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProceduralGeneration
-  room1object: {fileID: 1676923041361213007, guid: 0aac354e1083eb847aac31120e4181fe, type: 3}
-  room2object: {fileID: 0}
-  room3object: {fileID: 0}
-  room4object: {fileID: 0}
+  room1object: {fileID: 8450674595698628636, guid: 096c44e6b1cecdc418c1357bb6e2d4e5, type: 3}
+  room2object: {fileID: 5755274150977914846, guid: c566829c3cb4efc44bcd982d14d75a12, type: 3}
+  room3object: {fileID: 8050509353383008381, guid: e5adeb2874a6e8d4aa5d1f4d56047b9c, type: 3}
+  room4object: {fileID: 6609627728047901385, guid: 93274fa728d5d9d4f8ab95afddc9bc60, type: 3}
+  room5object: {fileID: 117444997165686955, guid: ec5b63284cc8587409b522a3a9ce16be, type: 3}
+  room6object: {fileID: 7637262140940631227, guid: d21ec9d7fe4503145b42302912e31d75, type: 3}
+  room7object: {fileID: 1476193043085916557, guid: 3f5f4a17bcdc2b94b8f0c85aa61dee99, type: 3}
+  room8object: {fileID: 4310335209544259518, guid: a70cb124cca88904b9f6edc55e3c11bf, type: 3}
+  room9object: {fileID: 1843324798456226061, guid: bece76f5d04959c438c1285236f50ab9, type: 3}
+  room10object: {fileID: 4852958165633067082, guid: 3f877103e7fe56745b0456606549f5e4, type: 3}
+  room11object: {fileID: 2531192270571009067, guid: 47936edc3e1c926489e0786b7bf250c3, type: 3}
+  room12object: {fileID: 8067089439384743735, guid: 3806ca517473ee24b8bb727f127998b8, type: 3}
+  room13object: {fileID: 6504982496009658931, guid: 47d25b6447e8f4e42bbdcd35016efcca, type: 3}
   nextRoomPosition: {x: 35.95, y: 0, z: -1}
   scale: 1
 --- !u!95 &1406203504
@@ -2244,6 +2253,10 @@ PrefabInstance:
     - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: jumpForce
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: m_Constraints
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8312960746277320103, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_LocalPosition.x
