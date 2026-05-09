@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 5533377828860484614}
   - component: {fileID: 8373410101044873791}
   - component: {fileID: 9200373590866102422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Corridor4mx4mFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

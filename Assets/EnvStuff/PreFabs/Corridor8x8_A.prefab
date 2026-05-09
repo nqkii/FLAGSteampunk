@@ -1068,6 +1068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor8x8_A
       objectReference: {fileID: 0}
+    - target: {fileID: 6885001511183681815, guid: bc571a17d422cc240b69497538816613, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

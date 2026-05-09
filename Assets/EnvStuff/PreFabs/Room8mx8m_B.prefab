@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7610376868899225159, guid: a9a6e8a0c59766045aca9a7d7d06d560, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a9a6e8a0c59766045aca9a7d7d06d560, type: 3}
       propertyPath: m_Name
       value: Room8mx8m_B
@@ -843,6 +847,10 @@ PrefabInstance:
     - target: {fileID: 3018420769659934426, guid: dbd5651c2ef453948a00c61e45609e38, type: 3}
       propertyPath: m_Name
       value: BigPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018420769659934426, guid: dbd5651c2ef453948a00c61e45609e38, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
