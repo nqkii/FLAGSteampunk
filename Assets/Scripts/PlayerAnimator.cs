@@ -18,7 +18,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("isRunning", speed > 0.1f);
 
         // Jumping - checks vertical velocity
-        bool isJumping = Mathf.Abs(rb.linearVelocity.y) > 0.1f;
+        bool isJumping = (rb.linearVelocity.y) > 0.1f;
         animator.SetBool("isJumping", isJumping);
     }
 }
