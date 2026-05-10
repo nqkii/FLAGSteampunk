@@ -1379,7 +1379,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.7034943, y: 2.140163, z: 1}
   m_Center: {x: 0, y: -0.07008171, z: 0}
@@ -2500,7 +2500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_CollisionDetection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8312960746277320103, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2536,7 +2536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471430396948638394, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8471430396948638394, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_Center.y

@@ -27,6 +27,8 @@ public class ProceduralGeneration : MonoBehaviour
     private bool nextRoomBig = false;
     private Queue<GameObject> instantiatedRooms = new Queue<GameObject>();
     private bool isColliding = false;
+    private int maxRooms = 8;
+    private bool pauseNewRoom = false;
 
     private void Start()
     {
@@ -49,7 +51,7 @@ public class ProceduralGeneration : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("NewRoom"))
+        if (other.gameObject.CompareTag("NewRoom") && !pauseNewRoom)
         {
             if (isColliding) return;
             isColliding = true;
@@ -83,11 +85,31 @@ public class ProceduralGeneration : MonoBehaviour
                 nextRoomPosition.x += nextRoom.roomLength * scale;
                 nextRoomPosition.y += nextRoom.verticalChange * scale;
 
-                if (instantiatedRooms.Count > 8)
+                if (instantiatedRooms.Count > maxRooms)
                 {
                     deleteRoom = instantiatedRooms.Dequeue();
                     Destroy(deleteRoom);
                 }
+            }
+            else
+            {
+                maxRooms++;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("NewRoom"))
+        {
+            Vector3 dir = other.transform.position - transform.position;
+            if (dir.x > 0)
+            {
+                pauseNewRoom = true;
+            }
+            else
+            {
+                pauseNewRoom = false;
             }
         }
     }
