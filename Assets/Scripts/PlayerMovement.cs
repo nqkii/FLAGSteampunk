@@ -26,12 +26,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
 
         originalSpeed = speed;
         originalJumpForce = jumpForce;
+
+        if (rb == null)
+            Debug.LogError("Rigidbody not found!");
+        else
+            Debug.Log("Rigidbody found on: " + rb.gameObject.name);
+
+        if (animator == null)
+            Debug.LogError("Animator not found!");
+        else
+            Debug.Log("Animator found on: " + animator.gameObject.name);
     }
 
     void Update()
