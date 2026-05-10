@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxObstacleB (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5052687100960739852, guid: 53904c09e7be2354bb7a4216479169a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5572378296672766134, guid: 53904c09e7be2354bb7a4216479169a7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.77492744
@@ -657,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 5052687100960739852, guid: 53904c09e7be2354bb7a4216479169a7, type: 3}
       propertyPath: m_Name
       value: BoxObstacleB (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052687100960739852, guid: 53904c09e7be2354bb7a4216479169a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5572378296672766134, guid: 53904c09e7be2354bb7a4216479169a7, type: 3}
       propertyPath: m_LocalScale.x

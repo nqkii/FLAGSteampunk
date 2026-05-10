@@ -832,6 +832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundGearObstacle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6929136271917463476, guid: c6841380edd4ce24b97e6a6b9eff641c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7738006692186189070, guid: c6841380edd4ce24b97e6a6b9eff641c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1389999

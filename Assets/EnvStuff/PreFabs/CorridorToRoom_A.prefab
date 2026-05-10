@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrokenPipeObstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3555552803782612278, guid: b2f290b9e6c18964e9c1f1e9c9b50697, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4187235786332770188, guid: b2f290b9e6c18964e9c1f1e9c9b50697, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1199999

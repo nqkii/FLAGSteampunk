@@ -688,6 +688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigPipeObstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4881069689215376710, guid: b35ad14e1eaa3cb41804b6709c6cdb3c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5257631137910196220, guid: b35ad14e1eaa3cb41804b6709c6cdb3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1099997
