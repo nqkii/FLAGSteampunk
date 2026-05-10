@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
 
