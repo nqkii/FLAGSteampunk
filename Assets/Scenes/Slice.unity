@@ -934,30 +934,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
-<<<<<<< Updated upstream
---- !u!114 &1155071989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155071985}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c25713b50f86d5c4795a74f455a9b6e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 8
-  jumpForce: 5
-  onGround: 0
-  fallMultiplier: 2.5
-  canDash: 1
-  dashingTime: 0
-  dashSpeed: 0
-  dashJumpIncrease: 0
-  timeBetweenDashes: 0
-=======
->>>>>>> Stashed changes
 --- !u!1 &1178653834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,30 +1315,6 @@ MonoBehaviour:
   room13object: {fileID: 6504982496009658931, guid: 47d25b6447e8f4e42bbdcd35016efcca, type: 3}
   nextRoomPosition: {x: 35.95, y: 0, z: -1}
   scale: 1
-<<<<<<< Updated upstream
---- !u!95 &1406203504
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406203497}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
-  m_Controller: {fileID: 9100000, guid: c9e0e706052f98e49bafa94b24f81ba6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!54 &1406203507 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
   m_PrefabInstance: {fileID: 2710177727206066894}
