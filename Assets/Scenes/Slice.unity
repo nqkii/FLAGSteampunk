@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fea13274f2b3bf47b5b5181b0ae4b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 1406203507}
+  player: {fileID: 1406203513}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,10 +1315,6 @@ MonoBehaviour:
   room13object: {fileID: 6504982496009658931, guid: 47d25b6447e8f4e42bbdcd35016efcca, type: 3}
   nextRoomPosition: {x: 35.95, y: 0, z: -1}
   scale: 1
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
-  m_PrefabInstance: {fileID: 2710177727206066894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1406203510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1340,8 +1336,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7034943, y: 2.140163, z: 1}
   m_Center: {x: 0, y: -0.07008171, z: 0}
-=======
->>>>>>> Stashed changes
+--- !u!54 &1406203513 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+  m_PrefabInstance: {fileID: 2710177727206066894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584690095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_CollisionDetection
