@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Animator animator;
     bool facingRight;
-
     private float originalSpeed;
     private float originalJumpForce;
 
@@ -25,16 +24,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashJumpIncrease;
     public float timeBetweenDashes;
 
-    //private bool isDead;
-
     void Start()
     {
-        //isDead = false;
         Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
-
         originalSpeed = speed;
         originalJumpForce = jumpForce;
 
@@ -69,15 +64,20 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Jump", rb.linearVelocity.y);
         animator.SetBool("IsGrounded", onGround);
-
-
     }
 
     private void FixedUpdate()
     {
-        float move = Input.GetAxis("Horizontal");
+        float move = Input.GetAxisRaw("Horizontal");
 
-        rb.linearVelocity = new Vector3(move * speed, rb.linearVelocity.y, 0);
+        if (Mathf.Abs(move) < 0.1f)
+        {
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector3(move * speed, rb.linearVelocity.y, 0);
+        }
 
         if (move > 0 && !facingRight)
             Flip();
@@ -100,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Time.timeScale = 0;
         SceneManager.LoadScene("End of run screen");
-        //isDead = true;
     }
 
     void Flip()
