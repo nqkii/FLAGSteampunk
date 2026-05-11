@@ -5,6 +5,8 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject tutorialScreen;
+    [SerializeField] private GameObject creditsScreen;
     [SerializeField] private ApplyBrightness applyBrightness;
 
     private void Update()
@@ -44,5 +46,29 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         optionsMenu.SetActive(false);
         applyBrightness.changeBrightness();
+    }
+
+    public void HelpScreen()
+    {
+        optionsMenu.SetActive(false);
+        tutorialScreen.SetActive(true);
+    }
+
+    public void CloseHelpScreen()
+    {
+        optionsMenu.SetActive(true);
+        tutorialScreen.SetActive(false);
+    }
+
+    public void CreditsScreen()
+    {
+        optionsMenu.SetActive(false);
+        creditsScreen.SetActive(true);
+    }
+
+    public void CloseCreditsScreen()
+    {
+        optionsMenu.SetActive(true);
+        creditsScreen.SetActive(false);
     }
 }
