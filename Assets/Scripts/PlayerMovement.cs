@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,8 +25,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashJumpIncrease;
     public float timeBetweenDashes;
 
+    //private bool isDead;
+
     void Start()
     {
+        //isDead = false;
+        //Time.timeScale = 0;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
@@ -64,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Jump", rb.linearVelocity.y);
         animator.SetBool("IsGrounded", onGround);
+
+
     }
 
     private void FixedUpdate()
@@ -78,6 +85,22 @@ public class PlayerMovement : MonoBehaviour
             Flip();
 
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("DeathMist"))
+        {
+            Debug.Log("DeathMist");
+            Dead();
+        }
+    }
+
+    void Dead()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("End of run screen");
+        //isDead = true;
     }
 
     void Flip()

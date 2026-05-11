@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
     public Transform player;
     public TextMeshProUGUI scoreText;
-    float score = 0.0f;
+    public float score = 0.0f;
     int lastHighScore = 0;
     bool newHighScore;
     string highScoreFilePath;
