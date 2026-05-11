@@ -946,8 +946,9 @@ GameObject:
   - component: {fileID: 1171507310}
   - component: {fileID: 1171507309}
   - component: {fileID: 1171507308}
+  - component: {fileID: 1171507312}
   m_Layer: 8
-  m_Name: Cube (1)
+  m_Name: Mist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,12 +1041,25 @@ Transform:
   m_GameObject: {fileID: 1171507307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.96, y: 1.4951, z: -3.9462}
-  m_LocalScale: {x: 8.221, y: 8.127322, z: 13.097146}
+  m_LocalPosition: {x: -18.91, y: 1.4951, z: 1.4235}
+  m_LocalScale: {x: 15.16199, y: 8.127322, z: 23.93041}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171507312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171507307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d3447d51d0d3e4998559cfa5c6c7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathMist
+  player: {fileID: 1406203497}
 --- !u!1 &1178653834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,6 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Score
   player: {fileID: 406944063}
   scoreText: {fileID: 1220282885}
+  score: 0
 --- !u!4 &1660572418
 Transform:
   m_ObjectHideFlags: 0
@@ -1840,7 +1855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &2008341308
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2561,12 +2576,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 406944063}
     - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: dashSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: jumpForce
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: dashingTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: dashJumpIncrease
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: timeBetweenDashes
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8168501075257530317, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: m_Constraints

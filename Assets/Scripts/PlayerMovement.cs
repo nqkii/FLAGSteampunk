@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //isDead = false;
-        //Time.timeScale = 0;
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
