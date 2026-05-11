@@ -15,4 +15,13 @@ public class ApplyBrightness : MonoBehaviour
             colorAdjustments.postExposure.value = saved;
         }
     }
+
+    public void changeBrightness()
+    {
+        if (volume.profile.TryGet(out colorAdjustments))
+        {
+            float saved = PlayerPrefs.GetFloat("Brightness", 0f);
+            colorAdjustments.postExposure.value = saved;
+        }
+    }
 }

@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private ApplyBrightness applyBrightness;
 
     private void Update()
     {
@@ -42,5 +43,6 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         optionsMenu.SetActive(false);
+        applyBrightness.changeBrightness();
     }
 }

@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4848557494724694951, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6564701614826780170, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
       propertyPath: m_Name
       value: OptionsMenu
@@ -1240,6 +1244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenu: {fileID: 1120488662}
   optionsMenu: {fileID: 828777803}
+  applyBrightness: {fileID: 1935671311}
 --- !u!4 &1101427495
 Transform:
   m_ObjectHideFlags: 0
