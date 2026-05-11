@@ -5,10 +5,18 @@ using UnityEngine.Localization.Settings;
 public class LocaleSelector : MonoBehaviour 
 {
     private bool active = false;
+
+    private void Start()
+    {
+        int saved = PlayerPrefs.GetInt("LocaleID", 0);
+        ChangeLocale(saved);
+    }
+
     public void ChangeLocale(int LocaleID)
     {
         if (active == true)
             return;
+        PlayerPrefs.SetInt("LocaleID", LocaleID);
         StartCoroutine(SetLocale(LocaleID));
     }
 
