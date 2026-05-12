@@ -53,4 +53,9 @@ public class Score : MonoBehaviour
             File.WriteAllText(highScoreFilePath, Mathf.FloorToInt(score).ToString());
         }
     }
+
+    public float getScore()
+    {
+        return score;
+    }
 }

@@ -107,6 +107,10 @@ MonoBehaviour:
     m_Key: CreditsLongText_C
     m_Metadata:
       m_Items: []
+  - m_Id: 5535076713189376
+    m_Key: HighScoreDisplayText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

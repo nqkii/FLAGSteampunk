@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public float dashJumpIncrease;
     public float timeBetweenDashes;
 
+    [SerializeField] TempScore2 tempScore2;
+    [SerializeField] Score scoreScript;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -98,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Dead()
     {
+        tempScore2.updateRecentScore(scoreScript.getScore());  
         Time.timeScale = 0;
         SceneManager.LoadScene("End of run screen");
     }

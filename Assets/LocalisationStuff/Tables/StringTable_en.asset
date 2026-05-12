@@ -130,6 +130,10 @@ MonoBehaviour:
       \r\nPixabay - Dragon-Studio \r\nPixabay - Thomas_Herudek "
     m_Metadata:
       m_Items: []
+  - m_Id: 5535076713189376
+    m_Localized: 'High Score:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

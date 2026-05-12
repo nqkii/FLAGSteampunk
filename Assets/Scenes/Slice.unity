@@ -2315,6 +2315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660572418}
   - component: {fileID: 1660572417}
+  - component: {fileID: 1660572419}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -2352,6 +2353,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1660572419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660572416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f9472b6e83fd04598e235abcd3a449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TempScore2
 --- !u!1 &1756156093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,9 +3315,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: tempScore2
+      value: 
+      objectReference: {fileID: 1660572419}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: dashingTime
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1660572417}
     - target: {fileID: 7934685839107189194, guid: 3309279d784685b43aa1be345206a89a, type: 3}
       propertyPath: dashJumpIncrease
       value: 10
