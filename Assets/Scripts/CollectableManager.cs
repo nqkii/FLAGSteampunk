@@ -26,9 +26,10 @@ public class CollectableManager : MonoBehaviour
         collected++;
         Debug.Log("Collected: " + collected + "/" + totalCollectables);
 
-        if (collected >= totalCollectables)
+        if (collected == totalCollectables)
         {
             playerMovement.ApplySpeedBoost(speedBoostAmount, speedBoostDuration);
+            totalCollectables = 0;
         }
     }
 }

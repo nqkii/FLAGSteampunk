@@ -876,6 +876,42 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Text
+      value: 3840 x 2160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[1].m_Text
+      value: 2560 x 1440
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[2].m_Text
+      value: 1920 x 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Text
+      value: 1280 x 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928553561744445784, guid: 493bea34b157ba14cb5a7ad13168b753, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
