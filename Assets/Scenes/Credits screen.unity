@@ -431,9 +431,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6829227869480499108, guid: fde5e9d842d3c6b4ab343706b80c8461, type: 3}
+      propertyPath: m_text
+      value: "Font: \r\nMochesa \u2013 Aqeela Studio\n\nMusic: \r\nPixabay - freesound_community  
+        \n\nSound Effects:\r\nPixabay \u2013 DavidDumaisAudio \r\nDragon-Studio \r\nThomas_Herudek\nAudioPapkin\nLitupsubway"
+      objectReference: {fileID: 0}
     - target: {fileID: 7042799857301829606, guid: fde5e9d842d3c6b4ab343706b80c8461, type: 3}
       propertyPath: m_Name
       value: CreditsScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818442272259121127, guid: fde5e9d842d3c6b4ab343706b80c8461, type: 3}
+      propertyPath: m_text
+      value: "3D Animation: \r\nWiktoria Wisniewska \n\n2D & UI Art: \r\nRebecca
+        Cresswell \n\nSFX & VFX: \r\nElroy De Souza \n\nMarket & Media Assets: \r\nRebecca
+        Cresswell "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

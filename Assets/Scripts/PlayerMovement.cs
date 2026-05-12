@@ -24,17 +24,29 @@ public class PlayerMovement : MonoBehaviour
     public float dashJumpIncrease;
     public float timeBetweenDashes;
 
+    [Header("Footsteps")]
+    public AudioSource footstepSource;
+    public AudioClip[] footstepClips;
+    public float footstepInterval = 0.3f;
+
+    private float footstepTimer;
+
     [SerializeField] TempScore2 tempScore2;
     [SerializeField] Score scoreScript;
 
     void Start()
     {
         Time.timeScale = 0f;
+
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
+
         facingRight = true;
+
         originalSpeed = speed;
         originalJumpForce = jumpForce;
+
+        footstepTimer = footstepInterval;
 
         if (rb == null)
             Debug.LogError("Rigidbody not found!");
@@ -49,50 +61,110 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0f && (Input.GetAxisRaw("Horizontal")) > 0.1f)
+        // Start game when moving
+        if (Time.timeScale == 0f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f)
         {
             Time.timeScale = 1f;
         }
 
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, 0);
+
+            rb.linearVelocity = new Vector3(
+                rb.linearVelocity.x,
+                jumpForce,
+                0
+            );
         }
 
+        // Better falling
         if (rb.linearVelocity.y < 0)
         {
-            rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            rb.linearVelocity += Vector3.up *
+                                 Physics.gravity.y *
+                                 (fallMultiplier - 1) *
+                                 Time.deltaTime;
         }
 
+        // Dash
         if (!onGround && Input.GetKeyDown(KeyCode.LeftShift))
         {
             DashAbility();
         }
 
+        // Animator
         animator.SetFloat("Jump", rb.linearVelocity.y);
         animator.SetBool("IsGrounded", onGround);
+
+        // Footsteps
+        HandleFootsteps();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         float move = Input.GetAxisRaw("Horizontal");
 
+        // Movement
         if (Mathf.Abs(move) < 0.1f)
         {
-            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            rb.linearVelocity = new Vector3(
+                0,
+                rb.linearVelocity.y,
+                0
+            );
         }
         else
         {
-            rb.linearVelocity = new Vector3(move * speed, rb.linearVelocity.y, 0);
+            rb.linearVelocity = new Vector3(
+                move * speed,
+                rb.linearVelocity.y,
+                0
+            );
         }
 
+        // Flip character
         if (move > 0 && !facingRight)
             Flip();
         else if (move < 0 && facingRight)
             Flip();
 
+        // Animation speed
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+    }
+
+    void HandleFootsteps()
+    {
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        if (isMoving && onGround)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                PlayFootstep();
+
+                // Consistent timing between footsteps
+                footstepTimer = footstepInterval;
+            }
+        }
+    }
+
+    void PlayFootstep()
+    {
+        if (footstepClips.Length == 0 || footstepSource == null)
+            return;
+
+        AudioClip clip = footstepClips[
+            Random.Range(0, footstepClips.Length)
+        ];
+
+        // Slight pitch variation
+        footstepSource.pitch = Random.Range(0.95f, 1.05f);
+
+        footstepSource.PlayOneShot(clip);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -107,13 +179,16 @@ public class PlayerMovement : MonoBehaviour
     void Dead()
     {
         tempScore2.updateRecentScore(scoreScript.getScore());
+
         Time.timeScale = 0;
+
         SceneManager.LoadScene("End of run screen");
     }
 
     void Flip()
     {
         facingRight = !facingRight;
+
         transform.Rotate(0, 180.0f, 0);
     }
 
@@ -144,13 +219,19 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Dash()
     {
         canDash = false;
+
         speed = dashSpeed;
         jumpForce = dashJumpIncrease;
+
         animator.SetTrigger("Dash");
+
         yield return new WaitForSeconds(dashingTime);
+
         speed = originalSpeed;
         jumpForce = originalJumpForce;
+
         yield return new WaitForSeconds(timeBetweenDashes);
+
         canDash = true;
     }
 
@@ -162,7 +243,9 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator SpeedBoost(float boostAmount, float duration)
     {
         speed += boostAmount;
+
         yield return new WaitForSeconds(duration);
+
         speed -= boostAmount;
     }
 }
