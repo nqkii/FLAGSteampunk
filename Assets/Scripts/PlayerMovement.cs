@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0f;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
@@ -49,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f && (Input.GetAxisRaw("Horizontal")) > 0.1f)
+        {
+            Time.timeScale = 1f;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
