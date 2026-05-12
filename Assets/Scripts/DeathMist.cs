@@ -4,34 +4,28 @@ public class DeathMist : MonoBehaviour
 {
     public GameObject player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    [Header("Speed Settings")]
+    public float speedClose = 3f;
+    public float speedNear = 4f;
+    public float speedFar = 7f;
+    public float speedVeryFar = 10f;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        if(distance < 5)
-        {
-            transform.position += transform.right * 3f * Time.deltaTime;
-        }
-        if ( distance < 10 )
-        {
-            transform.position += transform.right * 4f * Time.deltaTime;
-        }
 
-        if (distance > 10 )
-        {
-            transform.position += transform.right * 7f * Time.deltaTime;
-        }
-        if (distance > 20)
-        {
-            transform.position += transform.right * 10f * Time.deltaTime;
+        float speed;
 
-        }
+        if (distance < 5)
+            speed = speedClose;
+        else if (distance < 10)
+            speed = speedNear;
+        else if (distance < 20)
+            speed = speedFar;
+        else
+            speed = speedVeryFar;
 
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
     }
 }

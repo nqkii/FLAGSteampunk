@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Dead()
     {
-        tempScore2.updateRecentScore(scoreScript.getScore());  
+        tempScore2.updateRecentScore(scoreScript.getScore());
         Time.timeScale = 0;
         SceneManager.LoadScene("End of run screen");
     }
@@ -142,13 +142,22 @@ public class PlayerMovement : MonoBehaviour
         speed = dashSpeed;
         jumpForce = dashJumpIncrease;
         animator.SetTrigger("Dash");
-
         yield return new WaitForSeconds(dashingTime);
-
         speed = originalSpeed;
         jumpForce = originalJumpForce;
-
         yield return new WaitForSeconds(timeBetweenDashes);
         canDash = true;
+    }
+
+    public void ApplySpeedBoost(float boostAmount, float duration)
+    {
+        StartCoroutine(SpeedBoost(boostAmount, duration));
+    }
+
+    IEnumerator SpeedBoost(float boostAmount, float duration)
+    {
+        speed += boostAmount;
+        yield return new WaitForSeconds(duration);
+        speed -= boostAmount;
     }
 }
