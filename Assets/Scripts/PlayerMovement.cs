@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public float footstepInterval = 0.3f;
 
     private float footstepTimer;
+    private bool gameStarted = false;
 
     [SerializeField] TempScore2 tempScore2;
     [SerializeField] Score scoreScript;
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         facingRight = true;
+        gameStarted = false;
 
         originalSpeed = speed;
         originalJumpForce = jumpForce;
@@ -62,9 +64,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Start game when moving
-        if (Time.timeScale == 0f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f)
+        if (Time.timeScale == 0f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f  && !gameStarted)
         {
             Time.timeScale = 1f;
+            gameStarted = true;
         }
 
         // Jump
