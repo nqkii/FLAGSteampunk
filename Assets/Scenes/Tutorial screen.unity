@@ -465,6 +465,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2987760277442738604, guid: 5f03b2f321798be40a27d42312f812ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 528
+      objectReference: {fileID: 0}
     - target: {fileID: 5963897314528576167, guid: 5f03b2f321798be40a27d42312f812ef, type: 3}
       propertyPath: m_Name
       value: TutorialScreen
