@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject tutorialScreen;
     [SerializeField] private GameObject creditsScreen;
     [SerializeField] private ApplyBrightness applyBrightness;
+
+    public Animator transition;
+
+    public void Start()
+    {
+        transition.SetBool("Start1", false);
+    }
 
     private void Update()
     {
@@ -26,7 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu screen");
+        StartCoroutine(loadLevel("Menu screen"));
     }
 
     public void QuitGame()
@@ -70,5 +78,14 @@ public class PauseMenu : MonoBehaviour
     {
         optionsMenu.SetActive(true);
         creditsScreen.SetActive(false);
+    }
+
+    IEnumerator loadLevel(string scene)
+    {
+        transition.SetBool("Start1", true);
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadSceneAsync(scene);
     }
 }

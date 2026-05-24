@@ -32,11 +32,16 @@ public class PlayerMovement : MonoBehaviour
     private float footstepTimer;
     private bool gameStarted = false;
 
+    public Animator transition;
+
     [SerializeField] TempScore2 tempScore2;
     [SerializeField] Score scoreScript;
 
     void Start()
     {
+
+        transition.SetBool("Start1", false);
+
         Time.timeScale = 0f;
 
         rb = GetComponent<Rigidbody>();
@@ -185,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
 
         Time.timeScale = 0;
 
-        SceneManager.LoadScene("End of run screen");
+        StartCoroutine(loadLevel("End of run screen"));
     }
 
     void Flip()
@@ -250,5 +255,14 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         speed -= boostAmount;
+    }
+
+    IEnumerator loadLevel(string scene)
+    {
+        transition.SetBool("Start1", true);
+
+        yield return new WaitForSecondsRealtime(1);
+
+        SceneManager.LoadSceneAsync(scene);
     }
 }
