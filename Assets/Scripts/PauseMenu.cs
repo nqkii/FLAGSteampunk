@@ -84,7 +84,7 @@ public class PauseMenu : MonoBehaviour
     {
         transition.SetBool("Start1", true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
 
         SceneManager.LoadSceneAsync(scene);
     }
